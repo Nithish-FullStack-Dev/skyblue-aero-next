@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'NeubankNFW01';
+    src: url('NeubankNFW01-Bold.woff2') format('woff2'),
+        url('NeubankNFW01-Bold.woff') format('woff'),
+        url('NeubankNFW01-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

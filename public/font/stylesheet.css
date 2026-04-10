@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Venus Rising';
+    src: url('VenusRising-Regular.woff2') format('woff2'),
+        url('VenusRising-Regular.woff') format('woff'),
+        url('VenusRising-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
