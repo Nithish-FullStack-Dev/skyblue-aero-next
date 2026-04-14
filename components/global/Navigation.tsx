@@ -22,10 +22,18 @@ const Navigation = ({
   onOpenQuote: () => void;
   showLogo?: boolean;
 }) => {
-  const pathname = usePathname(); // ✅ Next replacement
+  const pathname = usePathname();
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+
+  // ✅ FIX: prevent hydration mismatch
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Scroll effect
   useEffect(() => {
@@ -42,27 +50,32 @@ const Navigation = ({
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
             ? "bg-brand-cream/90 backdrop-blur-md shadow-sm"
             : "bg-transparent"
-          }`}
+        }`}
       >
         <nav className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 py-3">
 
           {/* LOGO */}
           <Link href="/" className="flex items-center">
-            <motion.img
-              src="/logo.png"
-              alt="SkyblueAero Logo"
-              layoutId="logo"
-              className={`h-8 md:h-10 w-auto transition-opacity duration-500 ${showLogo ? "opacity-100" : "opacity-0"
-                }`}
-              transition={{
-                type: "spring",
-                stiffness: 80,
-                damping: 18,
-              }}
-            />
+            {mounted && (
+              <motion.img
+                src="/logo.png"
+                alt="SkyblueAero Logo"
+                layoutId="logo"
+                initial={false}
+                animate={{
+                  opacity: showLogo ? 1 : 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+                className="h-8 md:h-10 w-auto"
+              />
+            )}
           </Link>
 
           {/* DESKTOP NAV */}
@@ -73,8 +86,8 @@ const Navigation = ({
               const baseTextColor = isActive
                 ? "text-brand-gold"
                 : scrolled
-                  ? "text-brand-navy/80"
-                  : "text-white";
+                ? "text-brand-navy/80"
+                : "text-white";
 
               return (
                 <Link
@@ -88,8 +101,9 @@ const Navigation = ({
 
                     {/* Normal text */}
                     <span
-                      className={`block transition-opacity duration-200 ${hoveredLink === link.path ? "opacity-0" : "opacity-100"
-                        }`}
+                      className={`block transition-opacity duration-200 ${
+                        hoveredLink === link.path ? "opacity-0" : "opacity-100"
+                      }`}
                     >
                       {link.label}
                     </span>

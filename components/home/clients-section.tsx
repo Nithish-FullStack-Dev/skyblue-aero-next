@@ -1,6 +1,5 @@
 "use client";
 
-import { Sparkles } from "@/components/ui/sparkles";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { useTheme } from "next-themes";

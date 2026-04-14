@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Providers from "./providers";
 
@@ -23,13 +23,16 @@ export default function RootLayout({
   const [isCharterOpen, setIsCharterOpen] = useState(false);
   const [showNavLogo, setShowNavLogo] = useState(false);
 
-  // ✅ Loader once per session
-  const [isLoadingDone, setIsLoadingDone] = useState(() => {
-    if (typeof window !== "undefined") {
-      return sessionStorage.getItem("loaderShown") === "true";
+  // ✅ FIX: always same on server & client initially
+  const [isLoadingDone, setIsLoadingDone] = useState(false);
+
+  // ✅ FIX: read sessionStorage AFTER mount
+  useEffect(() => {
+    const loaderShown = sessionStorage.getItem("loaderShown") === "true";
+    if (loaderShown) {
+      setIsLoadingDone(true);
     }
-    return false;
-  });
+  }, []);
 
   const handleLoaderComplete = () => {
     setIsLoadingDone(true);
@@ -38,7 +41,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <Providers>
 
           {/* Loader */}
