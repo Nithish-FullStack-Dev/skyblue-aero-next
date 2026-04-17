@@ -73,7 +73,7 @@ const TypewriterText: React.FC<TypewriterTextProps> = ({
   text,
   as: Tag = "h2",
   className = "",
-  speed = 24,
+  speed = 2,
   startDelay = 0,
   onComplete,
 }) => {
@@ -336,13 +336,13 @@ const ServicesSection: React.FC = () => {
   as="h2"
   text="Aviation Solutions, Precisely Tailored to Every Journey"
   className="max-w-4xl text-3xl leading-tight text-white sm:text-4xl lg:text-5xl"
-  speed={2}
-  startDelay={10}
+  speed={1}
+  startDelay={0}
   onComplete={() => {
     setTimeout(() => {
       setShowCards(true);
       AOS.refresh(); // 👈 re-trigger AOS after render
-    }, 10); // slight delay feels smoother
+    }, 1); // slight delay feels smoother
   }}
 />
           </div>
