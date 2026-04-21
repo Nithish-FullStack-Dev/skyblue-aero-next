@@ -58,12 +58,15 @@ const Hero: React.FC<HeroProps> = ({ isLoaded }) => {
       {/* ─── CONTENT ─── */}
       <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-16 md:pb-24">
         <h1 className=" font-display font-bold text-white mb-6 text-3xl sm:text-3xl md:text-6xl">
-          Luxury in Air<br /> Personalised
+          One Stop Solution for<br /> all your aviation needs!
         </h1>
 
         <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
-          <p className="text-white/80 text-lg md:text-xl max-w-md leading-relaxed">
-            End-to-end aviation solutions — charter, management, and trip support — trusted by leaders worldwide.
+          <p className="text-white/90 text-lg md:text-xl max-w-5xl leading-relaxed">
+            We offer a full range of services from Fuel to Trip Support, from Permit Provisioning to Air Charters, 
+            from 24x7 Flight Dispatch to Aircraft Sales.
+             Each of our services is delivered with attention to detail, 
+             ensuring you peace of mind both in the skies and on the ground.
           </p>
         </div>
       </div>

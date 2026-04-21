@@ -14,7 +14,7 @@ const FloatingActions = ({ onOpenCharter }: { onOpenCharter: () => void }) => {
       </div>
 
       {/* WHATSAPP (RIGHT SIDE) */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <a
           href="https://wa.me/44000000000?text=I%27d%20like%20to%20enquire%20about%20charter%20services"
           target="_blank"
@@ -24,7 +24,7 @@ const FloatingActions = ({ onOpenCharter }: { onOpenCharter: () => void }) => {
         >
           <MessageCircle size={22} className="text-white" />
         </a>
-      </div>
+      </div> */}
     </>
   );
 };

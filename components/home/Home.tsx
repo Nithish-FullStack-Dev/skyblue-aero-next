@@ -147,33 +147,34 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
 
       <AnimatedCounter
-        end={4000}
+        end={150}
         suffix="+"
-        label="Personnel Worldwide"
+        label="Countries we Serve"
         icon={<Users size={180} />}
       />
 
-      {/* ✅ FIXED 24/7 */}
+      
       <AnimatedCounter
-        end={24}
-        secondaryValue={7}
-        label="Operations Centre"
-        icon={<Globe size={180} />}
-      />
-
-      <AnimatedCounter
-        end={4000}
+        end={1000}
         suffix="+"
-        label="Global Locations"
+        label="Airports Served World Wide"
         icon={<Map size={180} />}
       />
 
       <AnimatedCounter
-        end={150}
+        end={300}
         suffix="+"
         label="Aircraft Managed"
         icon={<Plane size={180} />}
       />
+      {/* ✅ FIXED 24/7 */}
+      <AnimatedCounter
+        end={24}
+        secondaryValue={7}
+        label="Operations"
+        icon={<Globe size={180} />}
+      />
+
 
     </div>
   </div>
@@ -207,7 +208,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
         </div>
       </section> */}
 
-<CharterServicesGrid />
+{/* <CharterServicesGrid /> */}
  {/* features */}
  {/* <Falcon900ExperienceSection /> */}
 {/* services */}

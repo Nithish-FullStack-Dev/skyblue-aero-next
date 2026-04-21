@@ -17,7 +17,7 @@ const services: ServiceItem[] = [
     title: "Trip Support",
     description:
       "Comprehensive global trip support covering permits, fuel coordination, ground handling, and logistics—ensuring every flight operates with precision across all destinations.",
-    className: "xl:col-span-4 xl:row-start-1",
+    className: "",
     delay: 50,
     link: "/trip-support",
     cardAos: "fade-right",
@@ -26,7 +26,7 @@ const services: ServiceItem[] = [
     title: "Air Charters",
     description:
       "Charter private aircraft on demand with access to a worldwide fleet. Experience unmatched flexibility, complete privacy, and a journey tailored entirely around your schedule.",
-    className: "xl:col-span-4 xl:row-start-1",
+    className: "",
     delay: 140,
     link: "/charters",
     cardAos: "fade-up",
@@ -35,7 +35,7 @@ const services: ServiceItem[] = [
     title: "Aircraft Brokerage",
     description:
       "Specialized aircraft brokerage for acquisition, sale, and leasing—connecting you with the right opportunities through a trusted global network.",
-    className: "xl:col-span-4 xl:row-start-1",
+    className: "",
     delay: 230,
     link: "/brokerage",
     cardAos: "fade-left",
@@ -44,7 +44,7 @@ const services: ServiceItem[] = [
     title: "Aircraft Maintenance",
     description:
       "Dependable maintenance solutions that uphold the highest standards of safety, compliance, and performance—delivered with meticulous attention to detail.",
-    className: "xl:col-span-8 xl:row-start-2 xl:col-start-1",
+    className: "",
     delay: 320,
     link: "/maintenance",
     cardAos: "fade-up-right",
@@ -53,10 +53,19 @@ const services: ServiceItem[] = [
     title: "Crew Leasing",
     description:
       "Access highly trained pilots and cabin crew who bring professionalism, safety, and world-class service to every operation.",
-    className: "xl:col-span-4 xl:row-start-2 xl:col-start-9",
+    className: "",
     delay: 410,
     link: "/crew-leasing",
     cardAos: "fade-up-left",
+  },
+  {
+    title: "Contract Fuel",
+    description:
+      "We provide you with a single source global fuel supply at over 4000 world-wide locations, at discounted rates. Every single fuel uplift is coordinated by our 24x7 Ops Team ensuring prompt service at the bay.",
+    className: "",
+    delay: 500,
+    link: "/contract-fuel",
+    cardAos: "fade-up",
   },
 ];
 
@@ -347,7 +356,7 @@ const ServicesSection: React.FC = () => {
 />
           </div>
 
-         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:mt-10 xl:grid-cols-12 xl:auto-rows-[minmax(220px,auto)]">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
   {showCards &&
     services.map((service) => (
       <ServiceCard
