@@ -239,11 +239,11 @@ export default function CrewLeasing() {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/541.jpg"
+            src="/images/Crew-Leasing.png"
             alt="Aviation crew"
             fill
             priority
-            className="object-cover object-top scale-105"
+            className="object-cover object-center scale-105"
           />
 
           <div className="absolute inset-0 bg-[#06111D]/45" />
@@ -368,7 +368,7 @@ export default function CrewLeasing() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#06111D]/80 via-[#06111D]/20 to-transparent" />
 
                 <div className="absolute bottom-8 left-8 right-8">
-                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/70 backdrop-blur-xl p-6">
+                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/50  p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <Users className="h-5 w-5 text-[#D7A34D]" />
                       <span className="text-xs tracking-[0.25em] uppercase text-white/70 font-medium">

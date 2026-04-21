@@ -9,6 +9,7 @@ import MagneticButton from "./MagneticButton";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "Contract Fuel", path: "/contract-fuel" },
   { label: "Trip Support", path: "/trip-support" },
   { label: "Brokerage", path: "/brokerage" },
   { label: "Maintenance", path: "/maintenance" },

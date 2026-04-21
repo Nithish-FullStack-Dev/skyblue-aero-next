@@ -18,7 +18,7 @@ const ClipReveal = ({
   children,
   className = "",
   direction = "up",
-  duration = 1.2,
+  duration = 0.3,
   triggerStart = "top 80%",
 }: ClipRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,7 +32,9 @@ const ClipReveal = ({
   useGSAP(
     () => {
       if (!ref.current) return;
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
       if (prefersReduced) {
         gsap.set(ref.current, { clipPath: "inset(0 0 0 0)" });
@@ -51,14 +53,18 @@ const ClipReveal = ({
             start: triggerStart,
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     },
-    { scope: ref }
+    { scope: ref },
   );
 
   return (
-    <div ref={ref} className={className} style={{ clipPath: clipFrom[direction] }}>
+    <div
+      ref={ref}
+      className={className}
+      style={{ clipPath: clipFrom[direction] }}
+    >
       {children}
     </div>
   );

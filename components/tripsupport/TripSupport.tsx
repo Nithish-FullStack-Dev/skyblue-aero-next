@@ -188,15 +188,15 @@ const globalCoverage = [
   },
   {
     name: "North America",
-    image: "/images/planes/North-America.jpg",
+    image: "/images/planes/North-America.png",
   },
   {
     name: "South America",
-    image: "/images/planes/South-America.jpg",
+    image: "/images/planes/South-America.png",
   },
   {
     name: "Australia",
-    image: "/images/planes/Australia.jpg",
+    image: "/images/planes/Australia.png",
   },
 ];
 export default function TripSupport() {
@@ -339,7 +339,7 @@ export default function TripSupport() {
 
                 {/* Floating badge */}
                 <div className="absolute bottom-8 left-8 right-8">
-                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/70 backdrop-blur-xl p-6">
+                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/50 p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <Globe2 className="h-5 w-5 text-[#D7A34D]" />
                       <span className="text-xs tracking-[0.25em] uppercase text-white/70 font-medium">
@@ -394,7 +394,7 @@ export default function TripSupport() {
                     }`}
                   >
                     {/* Glow */}
-                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#D7A34D]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#EF7E03] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     {/* Number */}
                     <div className="absolute right-6 top-5 text-[4rem] font-bold leading-none tracking-[-0.04em] text-[#06111D]/10">
@@ -531,36 +531,44 @@ export default function TripSupport() {
           </FadeUpStagger>
 
           <div className="mt-16">
-            <div className="grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3 xl:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 xl:grid-cols-6">
               {globalCoverage.map((item) => (
                 <div
                   key={item.name}
-                  className="group flex flex-col items-center text-center"
+                  className="group relative overflow-hidden rounded-[30px] border border-[#E7E7E7] bg-gradient-to-b from-white to-[#F7F7F7] p-3 shadow-[0_12px_35px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#D7A34D]/40 hover:shadow-[0_24px_55px_rgba(0,0,0,0.1)]"
                 >
-                  <div className="relative w-full overflow-hidden rounded-[32px] border border-[#06111D]/8 bg-white px-5 py-6 shadow-[0_18px_50px_rgba(6,17,29,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#D7A34D]/25 hover:shadow-[0_28px_80px_rgba(6,17,29,0.10)]">
-                    {/* Soft Glow */}
-                    <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#D7A34D]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  {/* Top Accent */}
+                  <div className="absolute left-1/2 top-0 h-[3px] w-0 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#D7A34D] via-[#F5C66B] to-[#D7A34D] transition-all duration-500 group-hover:w-[70%]" />
 
-                    {/* Map Area */}
-                    <div className="relative flex h-[120px] items-center justify-center overflow-hidden rounded-[24px] bg-gradient-to-br from-[#f8f8f8] to-[#f2f2f2]">
+                  {/* Blue Image Section */}
+                  <div className="relative overflow-hidden rounded-[24px] bg-[linear-gradient(145deg,#3D7BFF_0%,#0D5BEB_100%)] p-1 shadow-[inset_0_1px_8px_rgba(255,255,255,0.15),0_12px_30px_rgba(32,90,255,0.25)]">
+                    <div className="relative flex h-[120px] items-center justify-center overflow-hidden rounded-[20px] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_55%),linear-gradient(145deg,#4A84FF_0%,#135AE2_100%)] sm:h-[140px]">
+                      {/* Background Glow */}
+                      <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-2xl transition-all duration-500 group-hover:scale-125 group-hover:bg-white/20" />
+
+                      {/* Subtle Glass Shape */}
+                      <div className="absolute inset-x-5 top-4 h-[70%] rounded-[18px] border border-white/10 bg-white/[0.04]" />
+
+                      {/* Shine Effect */}
+                      <div className="absolute -left-[120%] top-0 h-full w-[60%] rotate-[20deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.16),transparent)] transition-all duration-1000 group-hover:left-[140%]" />
+
                       <Image
                         src={item.image}
                         alt={item.name}
                         width={180}
                         height={100}
-                        className="h-auto w-full max-w-[140px] object-contain transition-all duration-500 group-hover:scale-105"
+                        className="relative z-10 h-auto w-full max-w-[115px] object-contain drop-shadow-[0_10px_25px_rgba(255,255,255,0.22)] transition-all duration-500 group-hover:scale-110 sm:max-w-[130px]"
                       />
-
-                      {/* Hover Bottom Accent */}
-                      <div className="absolute bottom-0 left-1/2 h-[3px] w-0 -translate-x-1/2 bg-[#D7A34D] transition-all duration-500 group-hover:w-[85%]" />
                     </div>
+                  </div>
 
-                    {/* Region Name */}
-                    <div className="mt-6">
-                      <h3 className="text-sm md:text-[15px] font-bold uppercase tracking-[0.18em] text-[#ED7E0A] leading-[1.4]">
-                        {item.name}
-                      </h3>
-                    </div>
+                  {/* Title */}
+                  <div className="pt-4 text-center">
+                    <div className="mx-auto mb-3 h-[2px] w-8 rounded-full bg-gradient-to-r from-transparent via-[#D7A34D] to-transparent transition-all duration-500 group-hover:w-14" />
+
+                    <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#ED7E0A] transition-all duration-300 group-hover:text-[#C96A00] sm:text-[13px]">
+                      {item.name}
+                    </h3>
                   </div>
                 </div>
               ))}

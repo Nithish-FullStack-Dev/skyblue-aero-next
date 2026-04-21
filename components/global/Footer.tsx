@@ -4,25 +4,24 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   return (
     <footer className="relative overflow-hidden py-16 md:py-24 bg-brand-obsidian">
-      
       {/* VIDEO BACKGROUND */}
-      
 
       {/* FOOTER CONTENT */}
       <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
-          
           {/* Brand Section */}
           <div className="flex flex-col">
             <Link href="/" className="flex items-center">
-              <img 
-                src="/logo-white-aero.png" 
-                alt="SkyblueAero Logo" 
+              <img
+                src="/logo-white-aero.png"
+                alt="SkyblueAero Logo"
                 className="h-14 md:h-14 w-auto mb-10"
               />
             </Link>
             <p className="text-sm leading-relaxed text-white max-w-xs font-medium">
-              Sky Blue Aero delivers seamless private aviation solutions, offering charter services, global trip support, and expert aviation management.
+              Sky Blue Aero delivers seamless private aviation solutions,
+              offering charter services, global trip support, and expert
+              aviation management.
             </p>
           </div>
 
@@ -33,15 +32,16 @@ const Footer: React.FC = () => {
             </h4>
             <div className="flex flex-col gap-3">
               {[
+                { name: "Contract Fuel", path: "/contract-fuel" },
                 { name: "Air Charters", path: "/charters" },
                 { name: "Aircraft Brokerage", path: "/brokerage" },
                 { name: "Trip Support", path: "/trip-support" },
                 { name: "Maintenance", path: "/maintenance" },
                 { name: "Crew Leasing", path: "/crew-leasing" },
               ].map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.path} 
+                <Link
+                  key={link.name}
+                  href={link.path}
                   className="text-sm text-white hover:text-[#EF7D05] hover:translate-x-1 transition-all duration-300 w-fit"
                 >
                   {link.name}
@@ -61,9 +61,9 @@ const Footer: React.FC = () => {
                 { name: "Gallery", path: "/gallery" },
                 { name: "Blogs", path: "/blog" },
               ].map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.path} 
+                <Link
+                  key={link.name}
+                  href={link.path}
                   className="text-sm text-white hover:text-[#EF7D05] hover:translate-x-1 transition-all duration-300 w-fit"
                 >
                   {link.name}
@@ -79,33 +79,39 @@ const Footer: React.FC = () => {
             </h4>
             <div className="flex flex-col gap-3 text-sm text-white">
               <span className="font-medium">24/7 Operations Centre</span>
-              <a 
-                href="mailto:ops@skyblue.aero" 
+              <a
+                href="mailto:ops@skyblue.aero"
                 className="hover:text-[#EF7D05] transition-colors duration-300"
               >
                 ops@skyblue.aero
               </a>
-              <a 
-                href="tel:+16476946122" 
+              <a
+                href="tel:+16476946122"
                 className="hover:text-[#EF7D05] transition-colors duration-300"
               >
                 +1 (647) 694-6122
               </a>
             </div>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white font-medium tracking-wide">
-            © {new Date().getFullYear()} Skyblue Aero. All rights reserved. Powered by Outright Creators
+            © {new Date().getFullYear()} Skyblue Aero. All rights reserved.
+            Powered by Outright Creators
           </p>
           <div className="flex gap-6 text-xs text-white font-medium tracking-wide">
-            <Link href="/privacy" className="hover:text-[#EF7D05] transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-[#EF7D05] transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-[#EF7D05] transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-[#EF7D05] transition-colors"
+            >
               Terms of Service
             </Link>
           </div>

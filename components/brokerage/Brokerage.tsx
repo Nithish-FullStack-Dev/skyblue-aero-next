@@ -346,7 +346,7 @@ export default function Brokerage() {
             <ClipReveal>
               <div className="relative rounded-[40px] overflow-hidden h-[580px] shadow-[0_40px_100px_rgba(6,17,29,0)]">
                 <Image
-                  src="/images/TEM09606.jpg"
+                  src="/images/brokeage.png"
                   alt="Skyblue Aircraft — Global Brokerage"
                   fill
                   className="object-cover"
@@ -355,7 +355,7 @@ export default function Brokerage() {
 
                 {/* Floating badge */}
                 <div className="absolute bottom-8 left-8 right-8">
-                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/70 backdrop-blur-xl p-6">
+                  <div className="rounded-[24px] border border-white/15 bg-[#06111D]/50 p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <Globe2 className="h-5 w-5 text-[#D7A34D]" />
                       <span className="text-xs tracking-[0.25em] uppercase text-white/70 font-medium">
@@ -401,10 +401,10 @@ export default function Brokerage() {
                 return (
                   <div
                     key={item.title}
-                    className="group relative overflow-hidden rounded-[36px] border border-[#06111D]/10 bg-white p-8 md:p-10 shadow-[0_20px_60px_rgba(6,17,29,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#D7A34D]/30 hover:shadow-[0_32px_80px_rgba(6,17,29,0.12)]"
+                    className="group relative overflow-hidden rounded-[36px] border border-[#06111D]/10 bg-white p-8 md:p-10 shadow-[0_20px_60px_rgba(6,17,29,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EF7E03]/30 hover:shadow-[0_32px_80px_rgba(6,17,29,0.12)]"
                   >
                     {/* Glow */}
-                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#D7A34D]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#EF7E03] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     {/* Number */}
                     <div className="absolute right-6 top-5 text-[4rem] font-bold leading-none tracking-[-0.04em] text-[#06111D]/10">

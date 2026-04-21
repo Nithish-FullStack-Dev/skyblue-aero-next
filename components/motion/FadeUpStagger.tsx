@@ -1,5 +1,6 @@
 "use client";
-import { useRef, useEffect } from "react";
+
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -24,31 +25,36 @@ const FadeUpStagger = ({
   triggerStart = "top 85%",
 }: FadeUpStaggerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const prefersReduced = useRef(
-    typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
 
   useGSAP(
     () => {
-      if (prefersReduced.current || !containerRef.current) return;
-      const children = containerRef.current.children;
-      if (!children.length) return;
+      if (!containerRef.current) return;
 
-      gsap.from(children, {
-        y,
+      const items = Array.from(containerRef.current.children);
+
+      if (!items.length) return;
+
+      gsap.set(items, {
         opacity: 0,
+        y,
+      });
+
+      gsap.to(items, {
+        opacity: 1,
+        y: 0,
         duration,
         stagger,
         ease: "power3.out",
+        overwrite: "auto",
         scrollTrigger: {
           trigger: containerRef.current,
           start: triggerStart,
-          toggleActions: "play none none none",
+          once: true,
+          invalidateOnRefresh: true,
         },
       });
     },
-    { scope: containerRef }
+    { scope: containerRef, dependencies: [stagger, duration, y, triggerStart] },
   );
 
   return (
