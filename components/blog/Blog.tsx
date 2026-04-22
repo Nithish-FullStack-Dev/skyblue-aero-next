@@ -40,7 +40,7 @@ const Blog = () => {
       <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/36302.jpg"
+            src="/images/blog.jpg"
             alt="Private jet on tarmac"
             fill
             priority
@@ -112,7 +112,7 @@ const Blog = () => {
                         {post.category}
                       </span>
                       <span className="w-1 h-1 rounded-full bg-brand-navy/20" />
-                      <span className="font-body text-[11px] text-brand-navy/40 uppercase tracking-wider">
+                      <span className="font-body text-[11px] text-brand-navy uppercase tracking-wider">
                         {post.date}
                       </span>
                     </div>
@@ -121,7 +121,7 @@ const Blog = () => {
                       {post.title}
                     </h2>
 
-                    <p className="font-body text-brand-navy/60 text-sm leading-relaxed mb-6 grow">
+                    <p className="font-body text-sm leading-relaxed mb-6 grow">
                       {post.excerpt}
                     </p>
 

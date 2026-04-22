@@ -294,7 +294,6 @@ const Page = () => {
           font-family: 'Venus Rising', Georgia, serif;
           font-size: 28px;
           font-weight: 400;
-          font-style: italic;
           color: #1A1A2E;
           letter-spacing: -0.01em;
         }
@@ -302,7 +301,7 @@ const Page = () => {
         .section p {
           font-size: 14.5px;
           line-height: 1.85;
-          color: rgba(26,26,46,0.7);
+          color: #000000;
           font-weight: 300;
           max-width: 680px;
         }
@@ -410,7 +409,7 @@ const Page = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/images/terms.avif"
+              src="/images/terms.jpg"
               alt="Private jet on tarmac — Aircraft Brokerage"
               fill
               priority

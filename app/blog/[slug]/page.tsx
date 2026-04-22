@@ -120,7 +120,7 @@ const BlogPost = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <article className="lg:col-span-7">
               <FadeUpStagger>
-                <div className="whitespace-pre-line font-body text-lg text-brand-navy/80 leading-[1.8] tracking-wide">
+                <div className="whitespace-pre-line font-body text-lg leading-[1.8] tracking-wide">
                   {post.content}
                 </div>
               </FadeUpStagger>
@@ -179,7 +179,7 @@ const BlogPost = () => {
                         src={related.image}
                         alt={related.title}
                         fill
-                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                        className="object-cover transition-all duration-500"
                       />
                     </div>
                     <div>

@@ -191,7 +191,6 @@ const Page = () => {
           font-family: 'Venus Rising', Georgia, serif;
           font-size: 28px;
           font-weight: 400;
-          font-style: italic;
           color: #1A1A2E;
           letter-spacing: -0.01em;
         }
@@ -199,7 +198,7 @@ const Page = () => {
         .section p {
           font-size: 14.5px;
           line-height: 1.85;
-          color: rgba(26,26,46,0.7);
+          color: #000000;
           font-weight: 300;
           max-width: 680px;
         }
@@ -411,14 +410,14 @@ const Page = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/images/terms.avif"
+              src="/images/policy.jpg"
               alt="Private jet — Privacy Policy"
               fill
               priority
               className="object-cover object-center scale-105"
             />
             <div className="absolute inset-0 bg-[#06111D]/45" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#06111D]/20 via-[#06111D]/35 to-[#06111D]/80" />
+            <div className="absolute inset-0 bg-linear-to-b from-[#06111D]/20 via-[#06111D]/35 to-[#06111D]/80" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(215,163,77,0.18),transparent_40%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(6,17,29,0.82),rgba(6,17,29,0.28),rgba(6,17,29,0.78))]" />
           </div>
@@ -434,7 +433,7 @@ const Page = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 text-center">
+          <div className="relative z-10 max-w-350 mx-auto px-6 md:px-10 lg:px-16 text-center">
             <FadeUpStagger>
               <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 backdrop-blur-md px-5 py-2 mb-8">
                 <span className="h-2 w-2 rounded-full bg-[#D7A34D] animate-pulse" />
